@@ -119,11 +119,13 @@ class Paul_Graham(BasicNewsRecipe):
                 favorite_feeds = sorted(favorite_feeds, key=lambda d: d['title'])
                 hp_feeds = sorted(hp_feeds, key=lambda d: d['title'])
                 latest_feeds = archives_feeds[0:25]
+                chronological_feeds = archives_feeds[::-1]
 
                 feeds.append(("Classic", classic_feeds))
                 feeds.append(("Favorite", favorite_feeds))
                 feeds.append(("Hackers and Painters", hp_feeds))
                 feeds.append(("Latest", latest_feeds))
+                feeds.append(("Chronological", chronological_feeds))
 
                 archives_feeds= sorted(archives_feeds, key=lambda d: d['title'])
 
